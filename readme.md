@@ -1,20 +1,21 @@
 ## Clean Architecture
 
-Este projeto tem como objetivo explorar e aprender os princípios de Clean Architecture de forma prática.
+Projeto prático para estudar Clean Architecture, incluindo testes AAA (Arrange, Act, Assert) nos níveis unitário, integração e e2e.
+
+A aplicação está organizada em três camadas: domain, usecase e infrastructure.
 
 ### Rodando os testes
 
-Para testar somente os arquivos de uma pasta específica:
+Para testar arquivos de uma pasta:
 ```bash
 npx jest src/usecase/customer/find
 ```
 
-Para rodar todos os testes do projeto:
+Para rodar todos os testes:
 ```bash
 npm run test
 ```
 
 ### Contexto
 
-O desenvolvimento partiu de uma base em Domain-Driven Design (DDD), utilizando como referência o seguinte projeto original:
-[projeto original DDD](https://github.com/iamfelipy/f3-ddd-tatico-patterns-ts)
+Baseado em Domain-Driven Design (DDD), tomando como referência este [projeto original DDD](https://github.com/iamfelipy/f3-ddd-tatico-patterns-ts).
