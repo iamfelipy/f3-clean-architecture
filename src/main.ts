@@ -3,6 +3,9 @@ import OrderItem from "./domain/checkout/entity/order_item";
 import Customer from "./domain/customer/entity/customer";
 import Address from "./domain/customer/value-object/address";
 
+// observação: arquivo para testar o dominio
+// para o servidor web, olhar /infra/api/server.ts
+
 // Agregado com relação de id
 let customer = new Customer("123", "Felipy C")
 const address = new Address("Rua tres", 3, "12345-678", "Sao Paulo")
