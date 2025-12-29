@@ -3,6 +3,7 @@
     "@swc/cli": "^0.1.55",
     "@swc/core": "^1.2.148",
     "@swc/jest": "^0.2.20",
+    "@types/express": "^4.17.13",
     "@types/jest": "^27.4.1",
     "@types/node": "^17.0.45",
     "@types/uuid": "^10.0.0",
@@ -14,9 +15,15 @@
   "scripts": {
     "test": "npm run tsc -- --noEmit && jest",
     "tsc": "tsc",
-    "lint": "tslint -p tsconfig.json 'src/**/*.ts' --fix"
+    "lint": "tslint -p tsconfig.json 'src/**/*.ts' --fix",
+    "dev:run:gitbash:windows:1": "nodemon --exec npx ts-node src/infrastructure/api/server.ts",
+    "dev:run:gitbash:windows:2": "nodemon --exec ./node_modules/.bin/ts-node src/infrastructure/api/server.ts",
+    "dev": "nodemon src/infrastructure/api/server.ts"
   },
   "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
     "reflect-metadata": "^0.1.13",
     "sequelize": "^6.17.0",
     "sequelize-typescript": "^2.1.3",
