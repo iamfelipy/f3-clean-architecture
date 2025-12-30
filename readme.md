@@ -1,8 +1,10 @@
 ## Clean Architecture
 
-Projeto prático para estudar Clean Architecture, incluindo testes AAA (Arrange, Act, Assert) nos níveis unitário, integração e e2e.
+Projeto prático desenvolvido em **Node.js** e **TypeScript** para estudar Clean Architecture, incluindo testes AAA (Arrange, Act, Assert) nos níveis unitário, integração e e2e.
 
 A aplicação está organizada em três camadas: domain, usecase e infrastructure.
+
+O projeto utiliza o Notification Pattern para tratar e agregar erros de validação, centralizando mensagens de erro e facilitando o controle de regras de negócio.
 
 ### Rodando os testes
 
