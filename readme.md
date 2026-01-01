@@ -1,12 +1,29 @@
 ## Clean Architecture
 
-Projeto prático desenvolvido em **Node.js** e **TypeScript** para estudar Clean Architecture, incluindo testes AAA (Arrange, Act, Assert) nos níveis unitário, integração e e2e.
+Projeto prático desenvolvido em **Node.js** e **TypeScript** para estudar Clean Architecture.
 
-A aplicação está organizada em três camadas: domain, usecase e infrastructure.
+### Estrutura de Camadas
 
-O projeto utiliza o Notification Pattern para tratar e agregar erros de validação, centralizando mensagens de erro e facilitando o controle de regras de negócio.
+- **Domínio**  
+  Bounded contexts de `sales`, com os módulos:
+    - `checkout`
+    - `customer`
+    - `product`
 
-### Rodando os testes
+- **Usecase**  
+  Orquestração das entidades do domínio para atender as intenções do usuário.
+
+- **Infraestrutura**  
+  API e implementação dos repositories.
+
+O projeto utiliza o Notification Pattern para tratar e agregar erros de validação, centralizando mensagens de erro. Também utiliza validators com Yup no domínio para produtividade, promovendo baixo acoplamento entre as regras de validação e as entidades.
+
+### Testes
+
+Os testes seguem o padrão AAA (Arrange, Act, Assert) abrangendo os níveis:
+- Testes unitários
+- Testes de integração
+- Testes end-to-end (e2e)
 
 Para testar arquivos de uma pasta:
 ```bash
