@@ -55,7 +55,7 @@ describe("Unit test create customer use case", () => {
     input.address.street = "";
 
     await expect(customerCreateUseCase.execute(input)).rejects.toThrow(
-      "Street is required"
+      "address: Street is required"
     );
   });
 });
