@@ -20,6 +20,8 @@ O projeto utiliza o Notification Pattern para tratar e agregar erros de validaç
 
 ### Testes
 
+Testes: Unit (51), Integration (19), E2E (6)
+
 Os testes seguem o padrão AAA (Arrange, Act, Assert) abrangendo os níveis:
 - Testes unitários
 - Testes de integração
