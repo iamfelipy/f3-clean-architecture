@@ -58,5 +58,22 @@ describe("E2E test for product", () => {
     const product2 = listResponse.body.products[1];
     expect(product2.name).toBe("uva");
     expect(product2.price).toBe(444);
+
+    
+    const listResponseXML = await request(app)
+    .get("/product")
+    .set("Accept", "application/xml")
+    .send();
+
+    expect(listResponseXML.status).toBe(200);
+    expect(listResponseXML.text).toContain(`<?xml version="1.0" encoding="UTF-8"?>`);
+    expect(listResponseXML.text).toContain(`<products>`);
+    expect(listResponseXML.text).toContain(`<product>`);
+    expect(listResponseXML.text).toContain(`<name>banana</name>`);
+    expect(listResponseXML.text).toContain(`<price>123</price>`);
+    expect(listResponseXML.text).toContain(`</product>`);
+    expect(listResponseXML.text).toContain(`<name>uva</name>`);
+    expect(listResponseXML.text).toContain(`<price>444</price>`);
+    expect(listResponseXML.text).toContain(`</products>`);
   })
 })
